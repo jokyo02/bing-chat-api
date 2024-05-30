@@ -68,7 +68,6 @@ class CookiesConstructor:
             )
             data = res.json()
             cookies_str = data["result"]["cookies"]
-            cookies_screenshot = data["result"]["screenshot"]
             kiev = self.generate_kiev_rps_sec_auth()
             cookies_str = f"KievRPSSecAuth={kiev}; {cookies_str}"
             logger.note(f"Get Cookies: {cookies_str}")
@@ -80,7 +79,6 @@ class CookiesConstructor:
                     "created_time": datetime.now().strftime(
                         self.created_datetime_format
                     ),
-                    "screenshot": self.bypass_url + cookies_screenshot,
                 }
                 with open(self.secrets_path, "w") as wf:
                     json.dump(secrets, wf)
