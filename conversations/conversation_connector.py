@@ -62,7 +62,7 @@ class ConversationConnector:
     async def connect(self):
         self.quotelized_sec_access_token = urllib.parse.quote(self.sec_access_token)
         self.ws_url = (
-            f"wss://sydney.bing.com/sydney/ChatHub"
+            f"wss://msbi.pages.dev/sydney/ChatHub"
             f"?sec_access_token={self.quotelized_sec_access_token}"
         )
         self.aiohttp_session = aiohttp.ClientSession(cookies=self.cookies)
