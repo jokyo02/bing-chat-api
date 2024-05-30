@@ -9,7 +9,7 @@ from utils.logger import logger
 
 
 class CookiesConstructor:
-    bypass_url = "https://zklcdc-pass.hf.space"
+    bypass_url = "https://cctb.pages.dev"
 
     def __init__(self):
         self.cookies = {}
